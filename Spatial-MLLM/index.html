@@ -134,9 +134,9 @@
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video> -->
-      <img src="static/images/teaser.png" alt="Teaser"/>
+      <img src="static/images/teaser-spatialmllm.png" alt="Teaser"/>
       <h2 class="subtitle has-text-justified">
-        <strong>Video-T1:</strong> We present the generative effects and performance improvements of video generation under test-time scaling (TTS) settings. The videos generated with TTS are of higher quality and more consistent with the prompt than those generated without TTS.
+        <strong>Spatial-MLLM:</strong> We propose Spatial-MLLM, a method that significantly enhances the visual-based spatial intelligence of existing video MLLMs. As shown, Spatial-MLLM can understand and reason about the underlying scene based on video input and achieves SOTA performance in a wide range of spatial reasoning tasks.
       </h2>
     </div>
   </div>
@@ -166,7 +166,7 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Method Overview</h2>
         <div class="content has-text-justified">
-          <img src="./static/images/pipeline.png">
+          <img src="./static/images/pipeline-spatialmllm.png">
 
           <p><strong>Pipeline of Test-Time Scaling for Video Generation.</strong> <i>Top:</i> Random Linear Search for TTS video generation is to randomly sample Gaussian noises, prompt the video generator to generate sequential of video clips through step-by-step denoising in a linear manner, and select the highest score form the test verifiers. 
             <i>Bottom:</i> Tree of Frames (ToF) Search for TTS video generation is to divide the video generation process into three stages: 
