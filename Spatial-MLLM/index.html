@@ -221,6 +221,24 @@
               Temporal Flickering, on the other hand, involves maintaining consistent appearance and intensity over time, which is difficult to precisely assess, especially when dealing with complex scenes and dynamic objects.</p>
 
           </div>
+          <br>
+          <div class="content has-text-justified">
+            <img src="./static/images/eval_VSIbench.png">
+            <p><strong>Evaluation results on VSI-Bench.</strong></p>
+          </div>
+          <div class="content has-text-justified">
+            <img src="./static/images/eval_scanqa_sqa3d.png">
+            <p><strong>Evaluation results on ScanQA and SQA3D.</strong></p>
+          </div>
+          <div class="content has-text-justified">
+            <img src="./static/images/train_curve.png">
+            <p><strong>Visualization of Training Curves in the SFT and RL Stages.</strong> For the SFT stage, we present the
+mean token accuracy and loss curves. For the RL stage, we show the dynamics of completion length and reward.</p>
+          </div>
+          <div class="content has-text-justified">
+            <img src="./static/images/sampling-2.png">
+            <p><strong>Visualization of different frame sampling strategies.</strong> For clarity of visualization, we set  \( N<sub>m</sub> =128 \)  and \( N<sub>k</sub> = 8 \) in this example. Uniform frame sampling often overlooks transient regions that appear briefly in the video. Furthermore, when the camera remains static for extended periods, this strategy tends to yield redundant viewpoints. In contrast, our proposed space-aware frame sampling strategy achieves more comprehensive spatial coverage.</p>
+          </div>
         </div>
       </div>
     </div>
