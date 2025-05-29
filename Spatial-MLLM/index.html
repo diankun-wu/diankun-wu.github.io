@@ -172,7 +172,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Video</h2>
           <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/UuL2nP5rJcI?rel=0&showinfo=0"
+            <iframe src="https://www.youtube.com/"
                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
@@ -181,7 +181,7 @@
         <!-- <source src="static/myvideos/supp-video.mp4" type="video/mp4" /> -->
       <!-- </video> -->
       <h2 class="subtitle has-text-justified">
-        <b>ReconX</b> is a novel sparse-view 3D scene reconstruction paradigm that reframes the ambiguous reconstruction challenge as a temporal generation task.
+        We propose <b>Spatial-MLLM</b>, a method that significantly enhances the visual-based spatial intelligence of existing video MLLMs.
       </h2>
     </div>
   </div>
@@ -196,9 +196,9 @@
         <div class="column is-full-width">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            <img src="./static/images/teaser.png">
+            <img src="./static/images/pipeline-spatialmllm-2.png">
             <p>
-              Advancements in 3D scene reconstruction have transformed 2D images from the real world into 3D models, producing realistic 3D results from hundreds of input photos. Despite great success in dense-view reconstruction scenarios, rendering a detailed scene from insufficient captured views is still an ill-posed optimization problem, often resulting in artifacts and distortions in unseen areas. In this paper, we propose <strong>ReconX</strong>, a novel 3D scene reconstruction paradigm that reframes the ambiguous reconstruction challenge as a temporal generation task. The key insight is to unleash the strong generative prior of large pre-trained video diffusion models for sparse-view reconstruction. However, 3D view consistency struggles to be accurately preserved in directly generated video frames from pre-trained models. To address this, given limited input views, the proposed ReconX first constructs a global point cloud and encodes it into a contextual space as the 3D structure condition. Guided by the condition, the video diffusion model then synthesizes video frames that are both detail-preserved and exhibit a high degree of 3D consistency, ensuring the coherence of the scene from various perspectives. Finally, we recover the 3D scene from the generated video through a confidence-aware 3D Gaussian Splatting optimization scheme. Extensive experiments on various real-world datasets show the superiority of our ReconX over state-of-the-art methods in terms of quality and generalizability.
+              Recent advancements in Multimodal Large Language Models (MLLMs) have significantly enhanced performance on 2D visual tasks. However, improving their spatial intelligence remains a challenge. Existing 3D MLLMs always rely on additional 3D or 2.5D data to incorporate spatial awareness, restricting their utility in scenarios with only 2D inputs, such as images or videos. In this paper, we present <b>Spatial-MLLM</b>, a novel framework for visual-based spatial reasoning from purely 2D observations. Unlike conventional video MLLMs, which rely on CLIP-based visual encoders optimized for semantic understanding, our key insight is to unleash the strong structure prior from the feed-forward visual geometry foundation model. Specifically, we propose a dual-encoder architecture: a pretrained 2D visual encoder to extract semantic features, and a spatial encoder—initialized from the backbone of the visual geometry model—to extract 3D structure feature. A connector then integrates both features into unified visual tokens for enhanced spatial understanding. Furthermore, we propose a space-aware frame sampling strategy at inference time, which selects the spatially informative frames of a video sequence, ensuring that even under limited token length, the model focuses on frames critical for spatial reasoning. Beyond architecture improvements, we construct Spatial-MLLM-120k dataset and train the model using supervised-fining and GRPO on it. Extensive experiments on various real-world datasets demonstrate that our spatial-MLLM achieves state-of-the-art performance in a wide range of visual-based spatial understanding and reasoning tasks.
             </p>
           </div>
         </div>
