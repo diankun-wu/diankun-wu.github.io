@@ -166,9 +166,9 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Method Overview</h2>
         <div class="content has-text-justified">
-          <img src="./static/images/pipeline-spatialmllm.png">
+          <img src="./static/images/pipeline-spatialmllm-2.png">
 
-          <p><strong>Pipeline of Spatial-MLLM.</strong> Our model is composed of a 2D visual encoder \( \mathcal{E}_{\text{2D}} \), a spatial encoder \( \mathcal{E}_{\text{Spatial}} \) initialized from a feed-forward visual geometry foundation model, a connector module, and a large language model (LLM) backbone. At inference time, we incorporate a space-aware frame sampling strategy to ensure the model focuses on frames most critical for spatial reasoning when the input frame number is limited.</p>
+          <p><strong>Pipeline of Spatial-MLLM.</strong> Our model is composed of a 2D visual encoder \mathcal{E}_{\text{2D}}, a spatial encoder \( \mathcal{E}_{\text{Spatial}} \) initialized from a feed-forward visual geometry foundation model, a connector module, and a large language model (LLM) backbone. At inference time, we incorporate a space-aware frame sampling strategy to ensure the model focuses on frames most critical for spatial reasoning when the input frame number is limited.</p>
 
         </div>
       </div>
@@ -224,11 +224,11 @@
           <br>
           <div class="content has-text-justified">
             <img src="./static/images/eval_VSIbench.png">
-            <p><strong>Evaluation results on VSI-Bench.</strong></p>
+            <p><strong>Evaluation results on VSI-Bench.</strong>For Spatial-MLLM and Qwen2.5VL-series, we use 16 frames as input. For other open-source methods and GPT-4o, we follow the setting of VSI-Bench to set frame numbers (ranging from 8 to 32 frames). For Gemini-1.5 Pro, it samples video frames at 1 FPS. <strong>Bold</strong> and <span style="text-decoration: underline;">underline</span> denote the best-performing and second-best-performing open-source models, respectively.</p>
           </div>
           <div class="content has-text-justified">
             <img src="./static/images/eval_scanqa_sqa3d.png">
-            <p><strong>Evaluation results on ScanQA and SQA3D.</strong></p>
+            <p><strong>Evaluation results on ScanQA and SQA3D.</strong> We use the val set of ScanQA and test set of SQA3D for evaluation following common practice~\cite{Huang2023ChatSceneB3, Huang2023AnEG, Zheng2024Video3DLL}. <strong>Bold</strong> and <span style = "text-decoration: underline;">underline</span> denote the best-performing and second-best-performing models in each model category, respectively.</p>
           </div>
           <div class="content has-text-justified">
             <img src="./static/images/train_curve.png">
@@ -237,7 +237,7 @@ mean token accuracy and loss curves. For the RL stage, we show the dynamics of c
           </div>
           <div class="content has-text-justified">
             <img src="./static/images/sampling-2.png">
-            <p><strong>Visualization of different frame sampling strategies.</strong> For clarity of visualization, we set  \( N<sub>m</sub> =128 \)  and \( N<sub>k</sub> = 8 \) in this example. Uniform frame sampling often overlooks transient regions that appear briefly in the video. Furthermore, when the camera remains static for extended periods, this strategy tends to yield redundant viewpoints. In contrast, our proposed space-aware frame sampling strategy achieves more comprehensive spatial coverage.</p>
+            <p><strong>Visualization of different frame sampling strategies.</strong> For clarity of visualization, we set N<sub>m</sub> =128 and N<sub>k</sub> = 8 in this example. Uniform frame sampling often overlooks transient regions that appear briefly in the video. Furthermore, when the camera remains static for extended periods, this strategy tends to yield redundant viewpoints. In contrast, our proposed space-aware frame sampling strategy achieves more comprehensive spatial coverage.</p>
           </div>
         </div>
       </div>
@@ -415,13 +415,13 @@ mean token accuracy and loss curves. For the RL stage, we show the dynamics of c
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Video Demos: Autoregressive Models</h2>
+      <h2 class="title is-3">Spatial-MLLM Thinking Examples: </h2>
       <div style="display: flex">
         <div style="display: inline-block; width: 50%; padding-top: 20px; margin-bottom: -20px; text-align: center; font-size: 1.2em;">
-          <strong><span style="color: rgb(0, 119, 255);">Left</span>: Original Video</strong>
+          <strong><span style="color: rgb(4, 63, 129);">Left</span>: Original Video</strong>
         </div>
         <div style="display: inline-block; width: 50%; padding-top: 20px; margin-bottom: -20px; text-align: center; font-size: 1.2em;">
-          <strong><span style="color: green;">Right</span>: Spatial-MLLM Thinking</strong>
+          <strong><span style="color: rgb(1, 95, 1);">Right</span>: Spatial-MLLM Thinking</strong>
         </div>
       </div>
       <div id="results-carousel" class="carousel results-carousel"> 
