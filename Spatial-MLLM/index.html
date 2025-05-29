@@ -196,9 +196,9 @@
         <div class="column is-full-width">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            <img src="./static/images/pipeline-spatialmllm-2.png">
+            <img src="./static/images/teaser-spatialmllm.png">
             <p>
-              Recent advancements in Multimodal Large Language Models (MLLMs) have significantly enhanced performance on 2D visual tasks. However, improving their spatial intelligence remains a challenge. Existing 3D MLLMs always rely on additional 3D or 2.5D data to incorporate spatial awareness, restricting their utility in scenarios with only 2D inputs, such as images or videos. In this paper, we present <b>Spatial-MLLM</b>, a novel framework for visual-based spatial reasoning from purely 2D observations. Unlike conventional video MLLMs, which rely on CLIP-based visual encoders optimized for semantic understanding, our key insight is to unleash the strong structure prior from the feed-forward visual geometry foundation model. Specifically, we propose a dual-encoder architecture: a pretrained 2D visual encoder to extract semantic features, and a spatial encoder—initialized from the backbone of the visual geometry model—to extract 3D structure feature. A connector then integrates both features into unified visual tokens for enhanced spatial understanding. Furthermore, we propose a space-aware frame sampling strategy at inference time, which selects the spatially informative frames of a video sequence, ensuring that even under limited token length, the model focuses on frames critical for spatial reasoning. Beyond architecture improvements, we construct Spatial-MLLM-120k dataset and train the model using supervised-fining and GRPO on it. Extensive experiments on various real-world datasets demonstrate that our spatial-MLLM achieves state-of-the-art performance in a wide range of visual-based spatial understanding and reasoning tasks.
+              Recent advancements in Multimodal Large Language Models (MLLMs) have significantly enhanced performance on 2D visual tasks. However, improving their spatial intelligence remains a challenge. Existing 3D MLLMs always rely on additional 3D or 2.5D data to incorporate spatial awareness, restricting their utility in scenarios with only 2D inputs, such as images or videos. In this paper, we present <b>Spatial-MLLM</b>, a novel framework for visual-based spatial reasoning from purely 2D observations. Unlike conventional video MLLMs which rely on CLIP-based visual encoders optimized for semantic understanding, our key insight is to unleash the strong structure prior from the feed-forward visual geometry foundation model. Specifically, we propose a dual-encoder architecture: a pretrained 2D visual encoder to extract semantic features, and a spatial encoder—initialized from the backbone of the visual geometry model—to extract 3D structure features. A connector then integrates both features into unified visual tokens for enhanced spatial understanding. Furthermore, we propose a space-aware frame sampling strategy at inference time, which selects the spatially informative frames of a video sequence, ensuring that even under limited token length, the model focuses on frames critical for spatial reasoning. Beyond architecture improvements, we construct the Spatial-MLLM-120k dataset and train the model on it using supervised fine-tuning and GRPO. Extensive experiments on various real-world datasets demonstrate that our spatial-MLLM achieves state-of-the-art performance in a wide range of visual-based spatial understanding and reasoning tasks.
             </p>
           </div>
         </div>
@@ -216,14 +216,9 @@
         <div class="column is-full-width">
           <h2 class="title is-3">Method Overview</h2>
           <div class="content has-text-justified">
-            <img src="./static/images/method.png">
+            <img src="./static/images/pipeline-spatialmllm-2.png">
 
-            <p><strong>Overall Framework of ReconX</strong>. Given sparse-view images as input, we first build a global point cloud
-              and project it into 3D context representation space as 3D structure guidance. Then we inject the 3D
-              structure guidance into the video diffusion process and guide it to generate 3D consistent video
-              frames. Finally, we reconstruct the 3D scene from the generated video through Gaussian Splatting
-              with a 3D confidence-aware and robust scene optimization scheme. In this way, we unleash the
-              strong power of the video diffusion model to reconstruct intricate 3D scenes from very sparse views.</p>
+            <p><strong>Overview of Spatial-MLLM</strong>. Our model is composed of a 2D visual encoder, a spatial encoder which is initialized from a feed-forward visual geometry foundation model, a connector, and a large language model backbone. At inference time, we incorporate a space-aware frame sampling strategy to select spatially informative frames when the number of input frames is limited due to GPU memory constraints. </p>
 
           </div>
         </div>
