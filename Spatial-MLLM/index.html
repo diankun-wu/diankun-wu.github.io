@@ -224,21 +224,14 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Concurrent Work. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Performance</h2>
-        <div style="display: flex; flex-direction: column">
-          <div class="content has-text-justified">
-            <img src="./static/images/figure.png">
 
-            <p><strong>Performance on VSI-Bench.</strong>
-          </div>
-          <br>
-          <div class="content has-text-justified">
-            <img src="./static/images/eval_VSIbench.png">
-
-           <p class="is-size-6">
+        <!-- VSI‑Bench -->
+        <div class="content has-text-justified">
+          <img src="./static/images/eval_VSIbench.png" alt="VSI‑Bench results">
+          <p class="is-size-6">
             <strong>Evaluation Results on VSI‑Bench.</strong>
             For Spatial‑MLLM and Qwen‑2.5&nbsp;VL‑series we use 16 frames as input.
             For other open‑source methods and GPT‑4o, we follow the VSI‑Bench setting and use
@@ -247,33 +240,24 @@
             <strong>Bold</strong> and <u>underline</u> indicate the best‑performing and
             second‑best‑performing open‑source models, respectively.
           </p>
+        </div>
 
-          </div>
-          <br>
-          <div class="content has-text-justified">
-            <img src="./static/images/eval_scanqa_sqa3d.png">
-
+        <!-- ScanQA / SQA3D -->
+        <div class="content has-text-justified">
+          <img src="./static/images/eval_scanqa_sqa3d.png" alt="ScanQA &amp; SQA3D results">
           <p class="is-size-6">
             <strong>Evaluation Results on ScanQA and SQA3D.</strong>
             We use the validation set of ScanQA and the test set of SQA3D for evaluation, following common practice.
-            <strong>Bold</strong> and <u>underline</u> indicate the best‑performing and second‑best‑performing models in each model category, respectively.
+            <strong>Bold</strong> and <u>underline</u> indicate the best‑performing and
+            second‑best‑performing models in each model category, respectively.
           </p>
-
-          </div>
-          <br>
-          <div class="content has-text-justified">
-            <img src="./static/images/table.png">
-            <p><strong>A few dimensions heavily rely on the capabilities of foundation models, making improvements challenging for TTS.</strong>
-              However, for some hard-to-evaluate latent properties (<i>e.g.</i>, Motion Smoothness, Temporal Flickering), the improvement is less pronounced. 
-              This is likely because Motion Smoothness requires precise control of motion trajectories across frames, which is challenging for current video generation models to achieve. 
-              Temporal Flickering, on the other hand, involves maintaining consistent appearance and intensity over time, which is difficult to precisely assess, especially when dealing with complex scenes and dynamic objects.</p>
-
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
+
+      </div><!-- /.column -->
+    </div><!-- /.columns -->
+  </div><!-- /.container -->
 </section>
+
 
   <section class="hero is-light is-small">
     <div class="hero-body">
