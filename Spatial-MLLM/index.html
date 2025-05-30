@@ -48,32 +48,6 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   <script src="./static/js/script.js"></script>
-  <style>
-    /* 让视频和图片在同一行各占一半 */
-    .item-video{
-      display: flex;          /* 横向排列 */
-      gap: .5rem;             /* 你想要的间距 */
-    }
-    .item-video > video,
-    .item-video > img{
-      flex: 0 0 50%;          /* 固定 50 % 宽度 */
-      width: 100%;
-      height: auto;           /* 按比例缩放 */
-      object-fit: contain;    /* 保持完整画面不裁剪 */
-      max-height: 100%;
-    }
-
-    /* 可选：移动端单列显示 */
-    @media (max-width: 768px){
-      .item-video{
-        flex-direction: column;
-      }
-      .item-video > video,
-      .item-video > img{
-        flex: 0 0 auto;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -115,7 +89,7 @@
             <!-- <div class="publication-links"> -->
               <!-- PDF Link. -->
               <span class="link-block">
-              <a href="https://arxiv.org/pdf/"
+              <a href="https://arxiv.org/pdf/2505.23747"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fas fa-file-pdf"></i>
@@ -124,7 +98,7 @@
               </a>
               </span>
               <span class="link-block">
-              <a href="https://arxiv.org/abs/"
+              <a href="https://arxiv.org/abs/2505.23747"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="ai ai-arxiv"></i>
