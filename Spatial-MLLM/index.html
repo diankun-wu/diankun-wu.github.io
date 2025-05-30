@@ -189,7 +189,7 @@
   
 
 
-  <section class="section hero is-light">
+<section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -222,15 +222,59 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Real-World Results of ReconX</h2>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Performance</h2>
+        <div style="display: flex; flex-direction: column">
           <div class="content has-text-justified">
+            <img src="./static/images/figure.png">
+
+            <p><strong>Performance on VSI-Bench.</strong>
+          </div>
+          <br>
+          <div class="content has-text-justified">
+            <img src="./static/images/eval_VSIbench.png">
+
+           <p class="is-size-6">
+            <strong>Evaluation Results on VSI‑Bench.</strong>
+            For Spatial‑MLLM and Qwen‑2.5&nbsp;VL‑series we use 16 frames as input.
+            For other open‑source methods and GPT‑4o, we follow the VSI‑Bench setting and use
+            the frame counts specified there (ranging from 8 to 32 frames).
+            For Gemini‑1.5 Pro, video frames are sampled at&nbsp;1 FPS.
+            <strong>Bold</strong> and <u>underline</u> indicate the best‑performing and
+            second‑best‑performing open‑source models, respectively.
+          </p>
+
+          </div>
+          <br>
+          <div class="content has-text-justified">
+            <img src="./static/images/eval_scanqa_sqa3d.png">
+
+          <p class="is-size-6">
+            <strong>Evaluation Results on ScanQA and SQA3D.</strong>
+            We use the validation set of ScanQA and the test set of SQA3D for evaluation, following common practice.
+            <strong>Bold</strong> and <u>underline</u> indicate the best‑performing and second‑best‑performing models in each model category, respectively.
+          </p>
+
+          </div>
+          <br>
+          <div class="content has-text-justified">
+            <img src="./static/images/table.png">
+            <p><strong>A few dimensions heavily rely on the capabilities of foundation models, making improvements challenging for TTS.</strong>
+              However, for some hard-to-evaluate latent properties (<i>e.g.</i>, Motion Smoothness, Temporal Flickering), the improvement is less pronounced. 
+              This is likely because Motion Smoothness requires precise control of motion trajectories across frames, which is challenging for current video generation models to achieve. 
+              Temporal Flickering, on the other hand, involves maintaining consistent appearance and intensity over time, which is difficult to precisely assess, especially when dealing with complex scenes and dynamic objects.</p>
+
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
@@ -509,20 +553,13 @@
 </section> -->
 
 
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{liu2024reconxreconstructscenesparse,
-        title={ReconX: Reconstruct Any Scene from Sparse Views with Video Diffusion Model}, 
-        author={Fangfu Liu and Wenqiang Sun and Hanyang Wang and Yikai Wang and Haowen Sun and Junliang Ye and Jun Zhang and Yueqi Duan},
-        year={2024},
-        eprint={2408.16767},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV},
-        url={https://arxiv.org/abs/2408.16767},
-      }</code></pre>
-    </div>
-  </section>
+  <section class="section" id="BibTeX">
+   <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{},
+      </code></pre>
+    </div>
+  </section>
   
 
   <!-- TODO: update the arxiv link and github -->
