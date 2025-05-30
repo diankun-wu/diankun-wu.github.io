@@ -261,88 +261,167 @@
 </section>
 
 
-  <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class=" carousel results-carousel">        
-          <div class="item item-family">
-            <video poster="" id="family" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/museum.mp4"
-                      type="video/mp4">
-            </video>
-          </div>   
-          <div class="item item-family">
-            <video poster="" id="family" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/airport.mp4"
-                      type="video/mp4">
-            </video>
-          </div>          
-          <div class="item item-horse">
-            <video poster="" id="horse" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/bighouse.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-horse">
-            <video poster="" id="horse" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/playroom.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-horse">
-            <video poster="" id="horse" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/khouse.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Spatial Reasoning Demos</h2>
+      <div style="display: flex">
+        <div style="display: inline-block; width: 50%; padding-top: 20px; margin-bottom: -20px; text-align: center; font-size: 1.2em;">
+          <strong> Spatial Video</strong>
         </div>
-        <p>The results shown are derived from <strong>two or three sparse views as input</strong>.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <script>
-    new BeforeAfter({
-      id: '#example1'
-    });
-    new BeforeAfter({
-      id: '#example2'
-    });
-    new BeforeAfter({
-      id: '#example3'
-    });
-    new BeforeAfter({
-      id: '#example4'
-    });
-    new BeforeAfter({
-      id: '#example5'
-    });
-    new BeforeAfter({
-      id: '#example6'
-    });
-
-
-  </script>
-
-  <!-- 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            Needs update
-          </p>
-         
+        <div style="display: inline-block; width: 50%; padding-top: 20px; margin-bottom: -20px; text-align: center; font-size: 1.2em;">
+          <strong> Reasoning and Answering</strong>
         </div>
       </div>
-    </div>
+      <div id="results-carousel" class="carousel results-carousel"> 
+        <div class="item">
+          <div class="item-video">
+            <video poster="" id="video3" autoplay controls muted loop class="video-left">
+              <source src="./static/videos/spatial-mllm-examples/sofa-42446151.mp4"
+              type="video/mp4">
+            </video>
 
+            <img src="./static/images/sofa-objcnt.png">
+          </div>
+          <h2 class="subtitle has-text-centered">
+            A cat wearing sunglasses and working as a lifeguard at a pool.
+          </h2>
+        </div>
+
+        <div class="item">
+          <div class="item-video">
+            <video poster="" id="video3" autoplay controls muted loop class="video-left">
+              <source src="static/videos/flux/a_sheep_and_a_cow.mp4"
+              type="video/mp4">
+            </video>
+
+            <video poster="" id="video4" autoplay controls muted loop class="video-right">
+              <source src="static/videos/flux/a_sheep_and_a_cow_TTS.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            A sheep and a cow.
+          </h2>
+        </div>
+
+        <div class="item">
+          <div class="item-video">
+            <video poster="" id="video3" autoplay controls muted loop class="video-left">
+              <source src="static/videos/flux/A_cute_raccoon_playing_guitar_in_a_boat_on_the_ocean.mp4"
+              type="video/mp4">
+            </video>
+
+            <video poster="" id="video4" autoplay controls muted loop class="video-right">
+              <source src="static/videos/flux/A_cute_raccoon_playing_guitar_in_a_boat_on_the_ocean_TTS.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            A cute raccoon playing guitar in a boat on the ocean.
+          </h2>
+        </div>
+
+        <div class="item">
+          <div class="item-video">
+            <video poster="" id="video5" autoplay controls muted loop class="video-left">
+              <source src="static/videos/flux/Yellow_flowers_swing_in_the_wind.mp4"
+              type="video/mp4">
+            </video>
+            <video poster="" id="video6" autoplay controls muted loop class="video-right">
+              <source src="static/videos/flux/Yellow_flowers_swing_in_the_wind_TTS.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Yellow flowers swing in the wind.
+          </h2>
+        </div>
+
+        <div class="item">
+          <div class="item-video">
+            <video poster="" id="video5" autoplay controls muted loop class="video-left">
+              <source src="static/videos/flux/a_cat_and_a_dog.mp4"
+              type="video/mp4">
+            </video>
+            <video poster="" id="video6" autoplay controls muted loop class="video-right">
+              <source src="static/videos/flux/a_cat_and_a_dog_TTS.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            A cat and a dog.
+          </h2>
+        </div>
+
+        <div class="item">
+          <div class="item-video">
+            <video poster="" id="video5" autoplay controls muted loop class="video-left">
+              <source src="static/videos/flux/A_storm_trooper_vacuuming_the_beach.mp4"
+              type="video/mp4">
+            </video>
+            <video poster="" id="video6" autoplay controls muted loop class="video-right">
+              <source src="static/videos/flux/A_storm_trooper_vacuuming_the_beach_TTS.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            A storm trooper vacuuming the beach.
+          </h2>
+        </div>
+        
+        <div class="item">
+          <div class="item-video">
+            <video poster="" id="video1" autoplay controls muted loop height="50%" class="video-left">
+              <source src="static/videos/flux/A_panda_playing_on_a_swing_set.mp4"
+              type="video/mp4">
+            </video>
+            <video poster="" id="video2" autoplay controls muted loop height="50%" class="video-right">
+              <source src="static/videos/flux/A_panda_playing_on_a_swing_set_TTS.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            A panda playing on a swing set.
+          </h2>
+        </div>
+
+        <div class="item">
+          <div class="item-video">
+            <video poster="" id="video1" autoplay controls muted loop height="50%" class="video-left">
+              <source src="static/videos/flux/a_zebra_and_a_giraffe.mp4"
+              type="video/mp4">
+            </video>
+            <video poster="" id="video2" autoplay controls muted loop height="50%" class="video-right">
+              <source src="static/videos/flux/a_zebra_and_a_giraffe_TTS.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            A zebra and a giraffe.
+          </h2>
+        </div>
+
+        <div class="item">
+          <div class="item-video">
+            <video poster="" id="video1" autoplay controls muted loop height="50%" class="video-left">
+              <source src="static/videos/flux/Robot_dancing_in_Times_Square.mp4"
+              type="video/mp4">
+            </video>
+            <video poster="" id="video2" autoplay controls muted loop height="50%" class="video-right">
+              <source src="static/videos/flux/Robot_dancing_in_Times_Square_TTS.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Robot dancing in Times Square.
+          </h2>
+        </div>
+      </div>
+    </div>
   </div>
-</section> -->
+</section>
 
 
   <section class="section" id="BibTeX">
