@@ -48,7 +48,32 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   <script src="./static/js/script.js"></script>
+  <style>
+    /* 让视频和图片在同一行各占一半 */
+    .item-video{
+      display: flex;          /* 横向排列 */
+      gap: .5rem;             /* 你想要的间距 */
+    }
+    .item-video > video,
+    .item-video > img{
+      flex: 0 0 50%;          /* 固定 50 % 宽度 */
+      width: 100%;
+      height: auto;           /* 按比例缩放 */
+      object-fit: contain;    /* 保持完整画面不裁剪 */
+      max-height: 100%;
+    }
 
+    /* 可选：移动端单列显示 */
+    @media (max-width: 768px){
+      .item-video{
+        flex-direction: column;
+      }
+      .item-video > video,
+      .item-video > img{
+        flex: 0 0 auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -262,34 +287,31 @@
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Spatial Reasoning Demos</h2>
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Spatial Reasoning Demos</h2>
 
-      <div style="display: flex">
-        <div style="display: inline-block; width: 50%; padding-top: 20px; margin-bottom: -20px; text-align: center; font-size: 1.2em;">
-          <strong>Spatial Video</strong>
+        <div style="display:flex">
+          <div style="width:50%;padding-top:20px;margin-bottom:-20px;text-align:center;font-size:1.2em;"><strong>Spatial Video</strong></div>
+          <div style="width:50%;padding-top:20px;margin-bottom:-20px;text-align:center;font-size:1.2em;"><strong>Reasoning and Answering</strong></div>
         </div>
-        <div style="display: inline-block; width: 50%; padding-top: 20px; margin-bottom: -20px; text-align: center; font-size: 1.2em;">
-          <strong>Reasoning and Answering</strong>
-        </div>
-      </div>
 
-      <div id="results-carousel" class="carousel results-carousel"> 
-        <div class="item">
-          <div class="item-video" style="display: flex; width: 100%;">
-            <video poster="" id="video3" autoplay controls muted loop style="width: 30%; height: auto;">
-              <source src="./static/videos/spatial-mllm-examples/sofa-42446151.mp4" type="video/mp4">
-            </video>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <div class="item-video">
+              <video poster="" id="video3" autoplay controls muted loop>
+                <!-- 640×480 横版或 480×640 竖版都可以 -->
+                <source src="./static/videos/spatial-mllm-examples/sofa-42446151.mp4" type="video/mp4">
+              </video>
 
-            <img src="./static/images/sofa-objcnt.png" style="width: 70%; object-fit: contain; height: auto;">
+              <img src="./static/images/sofa-objcnt.png" alt="Spatial reasoning result">
+            </div>
+
+            <h2 class="subtitle has-text-centered">
+              A cat wearing sunglasses and working as a lifeguard at a pool.
+            </h2>
           </div>
-
-          <h2 class="subtitle has-text-centered">
-            A cat wearing sunglasses and working as a lifeguard at a pool.
-          </h2>
-        </div>
 
         <div class="item">
           <div class="item-video">
