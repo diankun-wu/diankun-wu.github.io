@@ -119,6 +119,7 @@ body {
   overflow: hidden;
   padding: 20px;
   font-size: 0;
+  text-align: center;
 }
 
 .results-carousel .item .item-video{
@@ -131,8 +132,11 @@ body {
 }
 
 .results-carousel video {
-  margin: 0;
-  max-width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 .slider-pagination .slider-page {
