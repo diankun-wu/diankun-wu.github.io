@@ -135,8 +135,8 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  max-width: 100%;
+  width: 50%;
+  max-width: 50%;
 }
 
 .slider-pagination .slider-page {
