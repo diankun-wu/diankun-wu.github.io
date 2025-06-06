@@ -1,23 +1,295 @@
-
 <!DOCTYPE html>
 <html>
 
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-55V1E709SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <title>TBD:)</title>
+    gtag('config', 'G-55V1E709SK');
+  </script>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="4D-Fly: Fast 4D Reconstruction from a Single Monocular Video">
+  <meta name="keywords" content="4D-Fly, 4D Reconstruction, Monocular Video, 3D Reconstruction, 4D Reconstruction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4D-Fly: Fast 4D Reconstruction from a Single Monocular Video</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
 </head>
 
 <body>
-    <div class="container" id="main">
-      <div class="row">
-        <h2 class="col-md-12 text-center">
-            <small>
-              TBD:)<br>
-            </small>
-        </h2>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- Title -->
+        <h1 class="title is-1 has-text-centered publication-title">
+          <span style="color:#03905a;font-weight:bold;">4D-Fly</span>:
+          Fast 4D Reconstruction from a Single Monocular Video
+        </h1>
+  
+        <!-- Authors -->
+        <p class="is-size-5 has-text-centered publication-authors">
+          <span class="author-block">
+            <a href="https://github.com/diankun-wu/">Diankun Wu</a><sup>1</sup>,
+          </span>
+          <span class="author-block">
+            <a href="https://liuff19.github.io/">Fangfu Liu</a><sup>1</sup>,
+          </span>
+          <span class="author-block">
+            <a href="https://github.com/CindyHung20/">Yi-Hsin Hung</a><sup>1</sup>,
+          </span>
+          <span class="author-block">
+            <a href="https://scholar.google.com/citations?hl=en&user=YNvwoQ0AAAAJ">Yue Qian</a><sup>2</sup>,
+          </span>
+          <span class="author-block">
+            <a href="https://xiaohangzhan.github.io/">Xiaohang Zhan</a><sup>2</sup>,
+          </span>
+          <span class="author-block">
+            <a href="https://duanyueqi.github.io/">Yueqi Duan</a><sup>1†</sup>
+          </span>
+        </p>
+  
+        <!-- Affiliations -->
+        <p class="has-text-centered is-size-5 mb-5">
+          <sup>1</sup> Tsinghua University&nbsp;&nbsp;
+          <sup>2</sup> Tencent&nbsp;&nbsp;
+          <sup>†</sup> Corresponding Author
+        </p>
+  
+        <!-- Links -->
+        <div class="buttons is-centered">
+          <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Wu_4D-Fly_Fast_4D_Reconstruction_from_a_Single_Monocular_Video_CVPR_2025_paper.html"
+             class="button is-dark is-rounded">
+            <span class="icon"><i class="fas fa-file-pdf"></i></span>
+            <span>Paper</span>
+          </a>
+  
+          <a href=""
+             class="button is-dark is-rounded">
+            <span class="icon"><i class="fab fa-youtube"></i></span>
+            <span>Video</span>
+          </a>
+  
+          <a href=""
+             class="button is-dark is-rounded">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>Code(Coming Soon)</span>
+          </a>
+        </div>
+      </div>
     </div>
+  </section>
+  
+
+<hr>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <div class="rounded-2xl overflow-hidden shadow-2xl hover:shadow-gray-200/50 transition-shadow duration-500">
+              <video 
+                src="./static/videos/07875_supp.mp4" 
+                loop 
+                playsinline 
+                controls 
+                class="w-full h-auto object-cover transition-transform duration-700">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <video id="teaser" autoplay controls loop playsinline height="100%"> -->
+        <!-- <source src="static/myvideos/supp-video.mp4" type="video/mp4" /> -->
+      <!-- </video> -->
+      <h2 class="subtitle has-text-justified">
+        In this work, we propose <b>4D-Fly</b> for fast reconstructing 4D scenes from monocular videos in minutes. Compared to previous methods, our approach achieves 20x speed-up while maintaining comparable or superior reconstruction quality.
+      </h2>
     </div>
+  </div>
+</section>
+  
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            4D reconstruction from a single monocular video is an important but challenging task due to its inherent underconstrained nature. While most existing 4D reconstruction methods focus on multi-camera settings, they always suffer from limited multi-view information in monocular videos. Recent studies have attempted to mitigate the illposed problem by incorporating data-driven priors as additional supervision. However, they require hours of optimization to align the splatted 2D feature maps of explicit Gaussians with various priors, which limits the range of applications. To address the time-consuming issue, we propose 4DFly, an efficient and effective framework for reconstructing the 4D scene from a monocular video (hundreds of frames within 6 minutes), more than 20 × faster and even achieving higher quality than previous optimization methods. Our key insight is to unleash the explicit property of Gaussian primitives and directly apply data priors to them. Specifically, we build a streaming 4D reconstruction paradigm that includes: propagating existing Gaussian to the next timestep with an anchor-based strategy, expanding the 4D scene map with the canonical Gaussian map, and an efficient 4D scene optimization process to further improve visual quality and motion accuracy. Extensive experiments demonstrate the superiority of our 4D-Fly over state-of-the-art methods in terms of speed and quality.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Concurrent Work. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Method Overview</h2>
+          <div class="content has-text-justified">
+            <img src="./static/images/4D-Fly_00.png">
+
+            <p>
+              <strong>Pipeline of 4D-Fly.</strong>
+              Our method takes as input a casually captured video with the camera intrinsics and extrinsics of each frame, aiming to reconstruct the dynamic 3D scene and the underlying motion of every point. We represent the underlying 4D scene as a global 4D scene map 
+              <em>&#x1D4A0;</em> (𝒢) and construct it in a streaming way. Assume we have constructed 
+              <em>G<sup>1→t</sup></em>. For the new frame at timestep <em>t+1</em>, we first compute its monocular depth map, segmentation mask, and 2D tracks using off-the-shelf models. Then, we extend the 4D scene map using:
+              (1) anchor-based propagation to propagate existing dynamic Gaussians to the next timestep;
+              (2) 4D scene expansion with a canonical Gaussian map;
+              and (3) fast optimization for both foreground and background.
+              After training over the entire sequence, our 4D scene map allows for novel view rendering at any queried timestep and can also be used for point tracking.
+            </p>
+            
+
+          </div>
+        </div>
+      </div>
+      <!--/ Concurrent Work. -->
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Visualization Results</h2>
+          <div class="content has-text-justified">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">        
+          <div class="item item-family">
+            <video poster="" id="family" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/bear.mp4" type="video/mp4">
+            </video>
+          </div>   
+          <div class="item item-family">
+            <video poster="" id="family" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/breakdance-flare.mp4" type="video/mp4">
+            </video>
+          </div>          
+          <div class="item item-horse">
+            <video poster="" id="horse" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/judo.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-horse">
+            <video poster="" id="horse" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/lucia.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-horse">
+            <video poster="" id="horse" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/rhino.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <p></p>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section id="bibtex" class="section">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+  
+      <pre><code class="language-bibtex">
+        @InProceedings{Wu_2025_CVPR,
+          author    = {Wu, Diankun and Liu, Fangfu and Hung, Yi-Hsin and Qian, Yue and Zhan, Xiaohang and Duan, Yueqi},
+          title     = {4D-Fly: Fast 4D Reconstruction from a Single Monocular Video},
+          booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
+          month     = {June},
+          year      = {2025},
+          pages     = {16663-16673}
+        }
+      </code></pre>
+    </div>
+  </section>
+  
+  
+
+  <!-- TODO: update the arxiv link and github -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link" href="">
+          <i class="fas fa-file-pdf"></i>
+        </a> -->
+        <!-- <a class="icon-link" href="" class="external-link" disabled>
+          <i class="fab fa-github"></i> -->
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              We thank the authors of
+              We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the
+              template of this website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>
