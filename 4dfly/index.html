@@ -174,7 +174,7 @@
             <p>
               <strong>Pipeline of 4D-Fly.</strong>
               Our method takes as input a casually captured video with the camera intrinsics and extrinsics of each frame, aiming to reconstruct the dynamic 3D scene and the underlying motion of every point. We represent the underlying 4D scene as a global 4D scene map 
-              <em>&#x1D4A0;</em> (𝒢) and construct it in a streaming way. Assume we have constructed 
+               𝒢 and construct it in a streaming way. Assume we have constructed 
               <em>G<sup>1→t</sup></em>. For the new frame at timestep <em>t+1</em>, we first compute its monocular depth map, segmentation mask, and 2D tracks using off-the-shelf models. Then, we extend the 4D scene map using:
               (1) anchor-based propagation to propagate existing dynamic Gaussians to the next timestep;
               (2) 4D scene expansion with a canonical Gaussian map;
