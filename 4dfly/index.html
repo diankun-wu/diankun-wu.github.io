@@ -128,23 +128,9 @@
     <div class="hero-body">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          <h2 class="title is-3">Video</h2>
-          <div class="publication-video">
-            <div class="rounded-2xl overflow-hidden shadow-2xl hover:shadow-gray-200/50 transition-shadow duration-500">
-              <video 
-                src="./static/videos/07875_supp.mp4" 
-                loop 
-                playsinline 
-                controls 
-                class="w-full h-auto object-cover transition-transform duration-700">
-              </video>
-            </div>
-          </div>
+          <img src="./static/images/teaser-final_00.png" alt="Teaser Image" class="w-full h-auto object-cover transition-transform duration-700">
         </div>
       </div>
-      <!-- <video id="teaser" autoplay controls loop playsinline height="100%"> -->
-        <!-- <source src="static/myvideos/supp-video.mp4" type="video/mp4" /> -->
-      <!-- </video> -->
       <h2 class="subtitle has-text-justified">
         In this work, we propose <b>4D-Fly</b> for fast reconstructing 4D scenes from monocular videos in minutes. Compared to previous methods, our approach achieves 20x speed-up while maintaining comparable or superior reconstruction quality.
       </h2>
@@ -168,6 +154,30 @@
   </div>
 </section>
 
+  <hr>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <div class="rounded-2xl overflow-hidden shadow-2xl hover:shadow-gray-200/50 transition-shadow duration-500">
+                <video 
+                  src="./static/videos/07875_supp.mp4" 
+                  loop 
+                  playsinline 
+                  controls 
+                  class="w-full h-auto object-cover transition-transform duration-700">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Concurrent Work. -->
@@ -180,7 +190,7 @@
             <p>
               <strong>Pipeline of 4D-Fly.</strong>
               Our method takes as input a casually captured video with the camera intrinsics and extrinsics of each frame, aiming to reconstruct the dynamic 3D scene and the underlying motion of every point. We represent the underlying 4D scene as a global 4D scene map 
-               𝒢 and construct it in a streaming way. Assume we have constructed 
+                𝒢 and construct it in a streaming way. Assume we have constructed 
               <em>G<sup>1→t</sup></em>. For the new frame at timestep <em>t+1</em>, we first compute its monocular depth map, segmentation mask, and 2D tracks using off-the-shelf models. Then, we extend the 4D scene map using:
               (1) anchor-based propagation to propagate existing dynamic Gaussians to the next timestep;
               (2) 4D scene expansion with a canonical Gaussian map;
