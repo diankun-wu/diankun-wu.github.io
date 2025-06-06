@@ -136,8 +136,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   /* Adjust the percentage below to your desired size */
-  width: 30%;
-  max-width: 30%;
+  width: 40%;
+  max-width: 40%;
 }
 
 .slider-pagination .slider-page {
