@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-55V1E709SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-55V1E709SK');
+  </script>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Spatial-MLLM: Boosting MLLM Capabilities in Visual-based Spatial Intelligence.">
+  <meta name="keywords" content="Spatial-MLLM, Spatial Intelligence, MLLM, Visual-based Spatial Intelligence, Spatial Reasoning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spatial-MLLM: Boosting MLLM Capabilities in Visual-based Spatial Intelligence
+  </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
+</head>
+
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span
+                style="color: #7292cd  ;font-weight: bolder;">Spatial-MLLM</span>: Boosting MLLM Capabilities in Visual-based Spatial Intelligence</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/diankun-wu/">Diankun Wu</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://liuff19.github.io/">Fangfu Liu</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://github.com/CindyHung20/">Yi‑Hsin Hung</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://duanyueqi.github.io/">Yueqi Duan</a><sup>1†</sup>
+              </span>
+            </div>
+
+          <!-- affiliations -->
+          <div class="column is-size-5">
+            <sup>1</sup> Tsinghua University&nbsp;
+            <sup>*</sup> Equal Contribution&nbsp;
+            <sup>†</sup> Corresponding Author
+          </div>
+
+
+          <!-- TODO: update paper and video link once upload -->
+          <div class="column has-text-centered">
+            <!-- <div class="publication-links"> -->
+              <!-- PDF Link. -->
+              <span class="link-block">
+              <a href="https://arxiv.org/pdf/2505.23747"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+              </a>
+              </span>
+              <span class="link-block">
+              <a href="https://arxiv.org/abs/2505.23747"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/PC-JFAtwi9k" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/diankun-wu/Spatial-MLLM"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Demo Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/liuff19/ReconX"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span>🤗 Demo</span>
+                </a>
+              </span> -->
+            </div>
+
+
+          <!-- Video Link. -->
+          <!-- <span class="link-block">
+                  <a href="https://youtu.be/470hul75bSM" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a> -->
+          </span>
+          <!-- Code Link. -->
+          <!-- <span class="link-block">
+                  <a href="https://github.com/VITA-Group/Instantsplat"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+        </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+<hr>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <div class="rounded-2xl overflow-hidden shadow-2xl hover:shadow-gray-200/50 transition-shadow duration-500">
+              <video 
+                src="./static/videos/demo.mp4" 
+                loop 
+                playsinline 
+                controls 
+                class="w-full h-auto object-cover transition-transform duration-700">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <video id="teaser" autoplay controls loop playsinline height="100%"> -->
+        <!-- <source src="static/myvideos/supp-video.mp4" type="video/mp4" /> -->
+      <!-- </video> -->
+      <h2 class="subtitle has-text-justified">
+        We propose <b>Spatial-MLLM</b>, a method that significantly enhances the visual-based spatial intelligence of existing video MLLMs. As shown, Spatial-MLLM is capable of understanding and reasoning about the underlying scene from video input, achieving state-of-the-art performance across a wide range of tasks.
+      </h2>
+    </div>
+  </div>
+</section>
+  
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advancements in Multimodal Large Language Models (MLLMs) have significantly enhanced performance on 2D visual tasks. However, improving their spatial intelligence remains a challenge. Existing 3D MLLMs always rely on additional 3D or 2.5D data to incorporate spatial awareness, restricting their utility in scenarios with only 2D inputs, such as images or videos. In this paper, we present <b>Spatial-MLLM</b>, a novel framework for visual-based spatial reasoning from purely 2D observations. Unlike conventional video MLLMs which rely on CLIP-based visual encoders optimized for semantic understanding, our key insight is to unleash the strong structure prior from the feed-forward visual geometry foundation model. Specifically, we propose a dual-encoder architecture: a pretrained 2D visual encoder to extract semantic features, and a spatial encoder—initialized from the backbone of the visual geometry model—to extract 3D structure features. A connector then integrates both features into unified visual tokens for enhanced spatial understanding. Furthermore, we propose a space-aware frame sampling strategy at inference time, which selects the spatially informative frames of a video sequence, ensuring that even under limited token length, the model focuses on frames critical for spatial reasoning. Beyond architecture improvements, we construct the Spatial-MLLM-120k dataset and train the model on it using supervised fine-tuning and GRPO. Extensive experiments on various real-world datasets demonstrate that our spatial-MLLM achieves state-of-the-art performance in a wide range of visual-based spatial understanding and reasoning tasks.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Concurrent Work. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Method Overview</h2>
+          <div class="content has-text-justified">
+            <img src="./static/images/pipeline-spatialmllm-2.png">
+
+            <p><strong>Overview of Spatial-MLLM</strong>. Our model is composed of a 2D visual encoder, a spatial encoder which is initialized from a feed-forward visual geometry foundation model, a connector, and a large language model backbone. At inference time, we incorporate a space-aware frame sampling strategy to select spatially informative frames when the number of input frames is limited due to GPU memory constraints. </p>
+
+          </div>
+        </div>
+      </div>
+      <!--/ Concurrent Work. -->
+
+    </div>
+  </section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Performance</h2>
+
+        <!-- VSI‑Bench -->
+        <div class="content has-text-justified">
+          <h3 class="title is-5 mb-2 has-text-centered">VSI‑Bench</h3>
+          <img src="./static/images/eval_VSIbench.png" alt="VSI‑Bench results">
+          <p class="is-size-6">
+            <strong>Evaluation Results on VSI‑Bench.</strong>
+            For Spatial‑MLLM and Qwen‑2.5&nbsp;VL‑series we use 16 frames as input.
+            For other open‑source methods and GPT‑4o, we follow the VSI‑Bench setting and use
+            the frame counts specified there (ranging from 8 to 32 frames).
+            For Gemini‑1.5 Pro, video frames are sampled at&nbsp;1 FPS.
+            <strong>Bold</strong> and <u>underline</u> indicate the best‑performing and
+            second‑best‑performing open‑source models, respectively.
+          </p>
+        </div>
+
+        <!-- ScanQA / SQA3D -->
+        <div class="content has-text-justified">
+          <h3 class="title is-5 mb-2 has-text-centered">ScanQA&nbsp;&amp;&nbsp;SQA3D</h3>
+          <img src="./static/images/eval_scanqa_sqa3d.png" alt="ScanQA &amp; SQA3D results">
+          <p class="is-size-6">
+            <strong>Evaluation Results on ScanQA and SQA3D.</strong>
+            We use the validation set of ScanQA and the test set of SQA3D for evaluation, following common practice.
+            <strong>Bold</strong> and <u>underline</u> indicate the best‑performing and
+            second‑best‑performing models in each model category, respectively.
+          </p>
+        </div>
+
+      </div><!-- /.column -->
+    </div><!-- /.columns -->
+  </div><!-- /.container -->
+</section>
+
+
+  <!-- <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Spatial Reasoning Demo</h2>
+          <div class="content has-text-justified">
+      </div>
+    </div>
+  </section>
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class=" carousel results-carousel">        
+          <div class="item item-family">
+            <video poster="" id="family" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/bathroom.mp4"
+                      type="video/mp4">
+            </video>
+          </div>   
+          <div class="item item-family">
+            <video poster="" id="family" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/chair.mp4"
+                      type="video/mp4">
+            </video>
+          </div>          
+          <div class="item item-horse">
+            <video poster="" id="horse" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/stove.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-horse">
+            <video poster="" id="horse" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/sofa.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <p></p>
+      </div>
+    </div>
+  </section>
+
+    <script>
+    new BeforeAfter({
+      id: '#example1'
+    });
+    new BeforeAfter({
+      id: '#example2'
+    });
+    new BeforeAfter({
+      id: '#example3'
+    });
+    new BeforeAfter({
+      id: '#example4'
+    });
+    new BeforeAfter({
+      id: '#example5'
+    });
+    new BeforeAfter({
+      id: '#example6'
+    }); -->
+
+
+  </script>
+
+  <section class="section" id="BibTeX">
+   <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{wu2025spatialmllmboostingmllmcapabilities,
+  title={Spatial-MLLM: Boosting MLLM Capabilities in Visual-based Spatial Intelligence},
+  author={Wu, Diankun  and Liu, Fangfu and Hung, Yi-Hsin and Duan, Yueqi},
+  journal={arXiv preprint arXiv:2505.23747},
+  year={2025}
+}
+      </code></pre>
+    </div>
+  </section>
+  
+
+  <!-- TODO: update the arxiv link and github -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link" href="">
+          <i class="fas fa-file-pdf"></i>
+        </a> -->
+        <!-- <a class="icon-link" href="" class="external-link" disabled>
+          <i class="fab fa-github"></i> -->
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the
+              template of this website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
