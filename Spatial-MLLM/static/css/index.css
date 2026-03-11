@@ -1,5 +1,57 @@
+:root {
+  --font-serif: 'Castoro', 'Times New Roman', serif;
+  --font-sans: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --text-primary: #1f2933;
+  --text-heading: #0f172a;
+}
+
+html {
+  font-size: 16px;
+}
+
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+/* Normalize typographic scale for the whole page */
+.title {
+  font-family: var(--font-serif);
+  color: var(--text-heading);
+  line-height: 1.25;
+}
+
+.title.is-1 {
+  font-size: clamp(2rem, 3.8vw, 2.8rem);
+}
+
+.title.is-2 {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.title.is-3 {
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+}
+
+.subtitle,
+.content p,
+p {
+  font-family: var(--font-sans);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.publication-authors {
+  font-size: clamp(1.04rem, 2vw, 1.16rem) !important;
+  line-height: 1.55;
+  margin-bottom: 0.35rem;
+}
+
+.subtitle.is-size-5 {
+  font-size: 1.03rem !important;
+  line-height: 1.6;
 }
 
 
@@ -24,11 +76,12 @@ body {
 }
 
 .teaser {
-  font-family: 'Google Sans', sans-serif;
+  font-family: var(--font-sans);
 }
 
 
 .publication-title {
+  margin-bottom: 0.6rem;
 }
 
 .publication-banner {
@@ -48,11 +101,48 @@ body {
 }
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+    font-family: var(--font-serif);
+    font-weight: 600;
 }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
+    font-family: var(--font-sans);
+}
+
+.publication-authors sup {
+  font-size: 0.72em;
+}
+
+.publication-meta {
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.65;
+  margin-bottom: 0.8rem;
+}
+
+.publication-meta .meta-line,
+.publication-meta .meta-venue {
+  margin: 0;
+}
+
+.publication-meta .meta-venue {
+  margin-top: 0.3rem;
+}
+
+.publication-meta .meta-sep {
+  margin: 0 0.45rem;
+  color: #94a3b8;
+}
+
+.venue-badge {
+  display: inline-block;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  color: #0f172a;
+  font-size: 0.94rem;
+  font-weight: 600;
 }
 
 .publication-venue {
@@ -65,9 +155,6 @@ body {
     color: #ff3860;
     width: fit-content;
     font-weight: bolder;
-}
-
-.publication-authors {
 }
 
 .publication-authors a {
@@ -83,10 +170,6 @@ body {
 }
 
 .publication-banner img {
-}
-
-.publication-authors {
-  /*color: #4286f4;*/
 }
 
 .publication-video {
@@ -105,6 +188,116 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.performance-block {
+  margin-bottom: 0;
+  padding: 1rem 1.15rem 0.9rem;
+  background: #ffffff;
+  border: 1px solid #dbe4ef;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+.performance-block .title.is-5 {
+  margin-bottom: 0.75rem !important;
+}
+
+.performance-image-wrap {
+  margin: 0 0 0.55rem;
+}
+
+.performance-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.performance-image-wrap-narrow {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.performance-block p.is-size-6 {
+  margin-top: 0;
+}
+
+.performance-divider {
+  width: min(92%, 880px);
+  margin: 1.15rem auto 1.35rem;
+  border-top: 1px dashed #cbd5e1;
+}
+
+@media (max-width: 768px) {
+  .performance-block {
+    padding: 0.85rem 0.8rem 0.75rem;
+  }
+
+  .performance-image-wrap-narrow {
+    width: 100%;
+  }
+}
+
+.bibtex-card {
+  background: #ffffff;
+  border: 1px solid #c7cfda;
+  border-radius: 2px;
+  padding: 0.95rem 1rem;
+  box-shadow: none;
+}
+
+.bibtex-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.45rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+.bibtex-title.title {
+  margin: 0;
+  font-size: 1.1rem !important;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+}
+
+.bibtex-hint {
+  margin: 0 0 0.45rem;
+  color: #6b7280;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.bibtex-code-block {
+  margin: 0;
+  padding: 0.75rem 0.82rem;
+  border-radius: 2px;
+  border: 1px solid #d7dde7;
+  border-left: 3px solid #a8b4c5;
+  background: #fcfdff;
+  color: #1f2937;
+  overflow-x: auto;
+}
+
+.bibtex-code-block code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .bibtex-card {
+    padding: 0.9rem 0.85rem;
+  }
+
+  .bibtex-title.title {
+    font-size: 1rem !important;
+  }
 }
 
 .publication-body img {
@@ -142,6 +335,3 @@ body {
 .eql-cntrb { 
   font-size: smaller;
 }
-
-
-
